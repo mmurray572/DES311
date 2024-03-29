@@ -6,33 +6,56 @@ public class PlayerController : MonoBehaviour
 {
 
     [SerializeField] private float moveSpeed = 7f;
-
+    [SerializeField] private GameInput gameInput;
 
     private bool iswalking;
 
 
     private void Update () {
-       Vector2 inputVector = new Vector2(0, 0);
-
-        if (Input.GetKey(KeyCode.W)) {
-            inputVector.y = +1;
-        }
-        if (Input.GetKey(KeyCode.S)) {
-            inputVector.y = -1;
-        }
-        if (Input.GetKey(KeyCode.A)) {
-            inputVector.x = -1;
-        }
-        if (Input.GetKey(KeyCode.D)) {
-            inputVector.x = +1;
-        }
-
-        inputVector = inputVector.normalized;
+        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
-        transform.position += moveDir * moveSpeed * Time.deltaTime;
+
+        float moveDistance = moveSpeed * Time.deltaTime;
+        float playerRadius = .7f;
+        float playerHeight = 2f;
+        bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDir, moveDistance);
+
+        if (!canMove) {
+            // cannot move towards moveDir
+
+            // attempt only X movement
+            Vector3 moveDirX = new Vector3(moveDir.x, 0, 0).normalized;
+            canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirX, moveDistance);
+
+            if (canMove) {
+                // can move only on the X
+                moveDir = moveDirX;
+            }
+            else {
+                // cannot move only on the X
+
+                // attempt only Z movement
+                Vector3 moveDirZ = new Vector3(0, 0, moveDir.z).normalized;
+                canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirZ, moveDistance);
+
+                if (canMove) {
+                    // can move only on the Z
+                    moveDir = moveDirZ;
+                }
+                else {
+                    // cannot move in any direction
+                }
+            }
+        }
+
+        if (canMove) {
+            transform.position += moveDir * moveSpeed * Time.deltaTime;
+        }
+
 
         iswalking = moveDir != Vector3.zero;
+
         float rotateSpeed = 10f;
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
     }

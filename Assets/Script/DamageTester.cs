@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DamageTester : MonoBehaviour
@@ -32,5 +33,7 @@ public class DamageTester : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V)) {
             regEnemyAtm.DealDamage(playerAtm.gameObject);
         }
+
+
     }
 }

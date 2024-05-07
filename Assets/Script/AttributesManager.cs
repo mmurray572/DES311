@@ -15,8 +15,10 @@ public class AttributesManager : MonoBehaviour
         if (armour <= 0)
             health -= amount;
 
-        if (health <= 0)
+        if (health <= 0) {
             Debug.Log("Dead");
+            Destroy(gameObject);
+        }
     }
 
     public void DealDamage (GameObject target) {

@@ -12,7 +12,6 @@ public class DamageTester : MonoBehaviour
     public AttributesManager berserkerEnemyAtm;
 
 
-
     private void Update()
     {
         //deal player damage to enemy
@@ -33,7 +32,5 @@ public class DamageTester : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V)) {
             regEnemyAtm.DealDamage(playerAtm.gameObject);
         }
-
-
     }
 }

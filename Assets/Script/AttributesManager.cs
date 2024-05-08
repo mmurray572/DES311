@@ -5,9 +5,13 @@ using UnityEngine;
 public class AttributesManager : MonoBehaviour
 {
 
+    [Header("Stats")]
     public int health;
     public int attack;
     public int armour;
+
+    [Header("Movement")]
+    public int drag;
     
     public void TakeDamage (int amount) {
         armour -= amount;
@@ -16,7 +20,6 @@ public class AttributesManager : MonoBehaviour
             health -= amount;
 
         if (health <= 0) {
-            Debug.Log("Dead");
             Destroy(gameObject);
         }
     }

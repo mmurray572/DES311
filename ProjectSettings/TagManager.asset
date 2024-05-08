@@ -7,6 +7,8 @@ TagManager:
   - SpikeTrap
   - LavaTrap
   - Enemy
+  - Ground
+  - LavaRing
   layers:
   - Default
   - TransparentFX

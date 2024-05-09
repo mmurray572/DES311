@@ -129,8 +129,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2536629}
-  - component: {fileID: 2536628}
   - component: {fileID: 2536627}
+  - component: {fileID: 2536630}
   m_Layer: 0
   m_Name: AgileEnemy
   m_TagString: Enemy
@@ -165,22 +165,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2536628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2536626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c579c57fa994f144bc2baada4ed5df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 80
-  attack: 10
-  armour: 40
-  drag: 0
 --- !u!4 &2536629
 Transform:
   m_ObjectHideFlags: 0
@@ -197,6 +181,21 @@ Transform:
   - {fileID: 671601563}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2536630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2536626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e566721d6d606b4aa2ddcc3f5047d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 80
+  attack: 10
+  armour: 40
 --- !u!850595691 &11455935
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -460,8 +459,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 212896283}
-  - component: {fileID: 212896282}
   - component: {fileID: 212896281}
+  - component: {fileID: 212896284}
   m_Layer: 0
   m_Name: BerserkerEnemy
   m_TagString: Enemy
@@ -496,22 +495,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &212896282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 212896280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c579c57fa994f144bc2baada4ed5df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 240
-  attack: 60
-  armour: 0
-  drag: 0
 --- !u!4 &212896283
 Transform:
   m_ObjectHideFlags: 0
@@ -528,13 +511,28 @@ Transform:
   - {fileID: 1233701615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &212896284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212896280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e566721d6d606b4aa2ddcc3f5047d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 240
+  attack: 60
+  armour: 0
 --- !u!43 &244840850
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-115648
+  m_Name: pb_Mesh26118
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -768,7 +766,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 53fb4968835b349fb81f8de35f2f5cc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -804,7 +802,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43546
+  m_Name: pb_Mesh25916
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1034,7 +1032,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276830250}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5057713, y: 1e-45, z: -1e-45, w: 0.8626677}
+  m_LocalRotation: {x: 0.5057713, y: 0.000000016595411, z: -0.000000009729685, w: 0.8626676}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1117,7 +1115,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 53fb4968835b349fb81f8de35f2f5cc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1161,7 +1159,8 @@ GameObject:
   - component: {fileID: 328844017}
   - component: {fileID: 328844016}
   - component: {fileID: 328844015}
-  m_Layer: 0
+  - component: {fileID: 328844021}
+  m_Layer: 6
   m_Name: MagmaEdge
   m_TagString: LavaRing
   m_Icon: {fileID: 0}
@@ -3176,13 +3175,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328844014}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.4, z: -0.0000033043}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.40000004, z: -0}
   m_LocalScale: {x: 65.317, y: 1.2063761, z: 65.317}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &328844021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328844014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c579c57fa994f144bc2baada4ed5df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  attack: 1
+  armour: 0
 --- !u!1 &419320803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3270,8 +3284,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419320803}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5257311, y: -0.000000043909864, z: 0.000000027137785, w: 0.85065085}
-  m_LocalPosition: {x: 0, y: 35.565, z: -18.04}
+  m_LocalRotation: {x: 0.52573115, y: -0.0000000146366235, z: 0.000000009045931, w: 0.85065085}
+  m_LocalPosition: {x: 0, y: 36, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6074,8 +6088,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 552561867}
-  - component: {fileID: 552561866}
   - component: {fileID: 552561865}
+  - component: {fileID: 552561868}
+  - component: {fileID: 552561869}
   m_Layer: 0
   m_Name: RegEnemy
   m_TagString: Enemy
@@ -6110,22 +6125,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &552561866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 552561864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c579c57fa994f144bc2baada4ed5df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  attack: 20
-  armour: 100
-  drag: 0
 --- !u!4 &552561867
 Transform:
   m_ObjectHideFlags: 0
@@ -6142,6 +6141,37 @@ Transform:
   - {fileID: 792665474}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &552561868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552561864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c06513dc07e574eaa702ab79c6cf8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpikeTrapAtm: {fileID: 1314186553}
+  playerAtm: {fileID: 0}
+  LavaTrapAtm: {fileID: 975718481}
+  LavaRingAtm: {fileID: 328844021}
+--- !u!114 &552561869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552561864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e566721d6d606b4aa2ddcc3f5047d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  attack: 20
+  armour: 100
 --- !u!1 &578470424
 GameObject:
   m_ObjectHideFlags: 0
@@ -6219,7 +6249,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 764fcb585f1f34a6da8ae3fca76c1261, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6382,7 +6412,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43758
+  m_Name: pb_Mesh26132
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -6813,7 +6843,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738934333}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.48562506, y: -0.000000033633267, z: 0.000000018684245, w: 0.8741672}
+  m_LocalRotation: {x: 0.48562506, y: 0.000000015041254, z: -0.000000008355849, w: 0.8741672}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6934,7 +6964,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-99684
+  m_Name: pb_Mesh26098
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -7099,7 +7129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43854
+  m_Name: pb_Mesh26212
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -7264,7 +7294,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43830
+  m_Name: pb_Mesh26188
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -7437,7 +7467,7 @@ GameObject:
   - component: {fileID: 953047446}
   - component: {fileID: 953047445}
   - component: {fileID: 953047444}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Magma1
   m_TagString: LavaTrap
   m_Icon: {fileID: 0}
@@ -7867,9 +7897,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  attack: 1
+  attack: 0
   armour: 0
-  drag: 0
 --- !u!4 &975718482
 Transform:
   m_ObjectHideFlags: 0
@@ -7894,7 +7923,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43502
+  m_Name: pb_Mesh25890
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -8128,7 +8157,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 53fb4968835b349fb81f8de35f2f5cc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8233,7 +8262,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 53fb4968835b349fb81f8de35f2f5cc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8319,7 +8348,7 @@ Transform:
   m_GameObject: {fileID: 1149551151}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.565, z: -3.04}
+  m_LocalPosition: {x: 0, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8342,11 +8371,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   groundDrag: 3
+  LavaDrag: 10
   airMultiplier: 0.4
   playerHeight: 2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
+  whatIsLava:
+    serializedVersion: 2
+    m_Bits: 64
   orientation: {fileID: 1291378667}
 --- !u!114 &1149551157
 MonoBehaviour:
@@ -8363,7 +8396,6 @@ MonoBehaviour:
   health: 150
   attack: 40
   armour: 150
-  drag: 0
 --- !u!114 &1149551158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8378,7 +8410,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpikeTrapAtm: {fileID: 1314186553}
   playerAtm: {fileID: 1149551157}
-  LavaAtm: {fileID: 975718481}
+  LavaTrapAtm: {fileID: 975718481}
+  LavaRingAtm: {fileID: 328844021}
 --- !u!1 &1156683155
 GameObject:
   m_ObjectHideFlags: 0
@@ -8510,7 +8543,7 @@ Transform:
   m_GameObject: {fileID: 1156683155}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 35.565, z: -18.04}
+  m_LocalPosition: {x: 0, y: 36, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8525,7 +8558,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43674
+  m_Name: pb_Mesh26012
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -8759,7 +8792,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 53fb4968835b349fb81f8de35f2f5cc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8941,7 +8974,7 @@ GameObject:
   - component: {fileID: 1307882492}
   - component: {fileID: 1307882491}
   - component: {fileID: 1307882490}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Magma3
   m_TagString: LavaTrap
   m_Icon: {fileID: 0}
@@ -9571,7 +9604,6 @@ MonoBehaviour:
   health: 1
   attack: 30
   armour: 0
-  drag: 0
 --- !u!1 &1380877554
 GameObject:
   m_ObjectHideFlags: 0
@@ -11991,7 +12023,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43788
+  m_Name: pb_Mesh26158
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -12291,7 +12323,7 @@ GameObject:
   - component: {fileID: 1556720316}
   - component: {fileID: 1556720315}
   - component: {fileID: 1556720314}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Magma2
   m_TagString: LavaTrap
   m_Icon: {fileID: 0}
@@ -12897,9 +12929,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAtm: {fileID: 1149551157}
-  regEnemyAtm: {fileID: 552561866}
-  agileEnemyAtm: {fileID: 2536628}
-  berserkerEnemyAtm: {fileID: 212896282}
+  regEnemyAtm: {fileID: 552561869}
+  agileEnemyAtm: {fileID: 2536630}
+  berserkerEnemyAtm: {fileID: 212896284}
 --- !u!4 &1566980178
 Transform:
   m_ObjectHideFlags: 0
@@ -12990,7 +13022,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 53fb4968835b349fb81f8de35f2f5cc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13727,7 +13759,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43560
+  m_Name: pb_Mesh25930
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -13892,7 +13924,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43878
+  m_Name: pb_Mesh26236
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -14122,7 +14154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980651083}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5257311, y: -0.000000021954936, z: 0.000000013568895, w: 0.85065085}
+  m_LocalRotation: {x: 0.5257311, y: -0.000000007318311, z: 0.000000004522964, w: 0.85065085}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15554,7 +15586,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 53fb4968835b349fb81f8de35f2f5cc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15970,8 +16002,8 @@ SceneRoots:
   - {fileID: 697139374}
   - {fileID: 534832412}
   - {fileID: 1380877560}
-  - {fileID: 328844020}
   - {fileID: 1416140696}
+  - {fileID: 328844020}
   - {fileID: 975718482}
   - {fileID: 1982870180}
   - {fileID: 2075937095}

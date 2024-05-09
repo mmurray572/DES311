@@ -7,9 +7,9 @@ public class DamageTester : MonoBehaviour
 {
 
     public AttributesManager playerAtm;
-    public AttributesManager regEnemyAtm;
-    public AttributesManager agileEnemyAtm;
-    public AttributesManager berserkerEnemyAtm;
+    public EnemyAttributesManager regEnemyAtm;
+    public EnemyAttributesManager agileEnemyAtm;
+    public EnemyAttributesManager berserkerEnemyAtm;
 
 
     private void Update()
@@ -29,8 +29,16 @@ public class DamageTester : MonoBehaviour
 
 
         //deal enemy damage to player
-        if (Input.GetKeyDown(KeyCode.V)) {
+        if (Input.GetKeyDown(KeyCode.N)) {
             regEnemyAtm.DealDamage(playerAtm.gameObject);
+        }
+
+        if (Input.GetKeyDown(KeyCode.B)) {
+            agileEnemyAtm.DealDamage(playerAtm.gameObject);
+        }
+
+        if (Input.GetKeyDown(KeyCode.V)) {
+            berserkerEnemyAtm.DealDamage(playerAtm.gameObject);
         }
     }
 }

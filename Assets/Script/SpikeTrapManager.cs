@@ -6,7 +6,9 @@ public class SpikeTrapManager : MonoBehaviour {
 
     public AttributesManager SpikeTrapAtm;
     public AttributesManager playerAtm;
-    public AttributesManager LavaAtm;
+    public AttributesManager LavaTrapAtm;
+    public AttributesManager LavaRingAtm;
+
 
     void OnTriggerEnter (Collider other) {
         if (other.gameObject.tag == "SpikeTrap") {
@@ -17,11 +19,11 @@ public class SpikeTrapManager : MonoBehaviour {
 
     private void OnTriggerStay (Collider other) {
         if (other.gameObject.tag == "LavaTrap") {
-            LavaAtm.DealDamage(playerAtm.gameObject);
+            LavaTrapAtm.DealDamage(playerAtm.gameObject);
             Debug.Log("slow");
         }
         if (other.gameObject.tag == "LavaRing") {
-            LavaAtm.DealDamage(playerAtm.gameObject);
+            LavaRingAtm.DealDamage(playerAtm.gameObject);
             Debug.Log("slow");
         }
     }

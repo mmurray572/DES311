@@ -9,7 +9,7 @@ public class AttributesManager : MonoBehaviour
     public int health;
     public int attack;
     public int armour;
-    
+
     public void TakeDamage (int amount) {
         armour -= amount;
         

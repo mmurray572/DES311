@@ -22,7 +22,7 @@ public class EnemyAttributesManager : MonoBehaviour
     }
 
     public void DealDamage (GameObject target) {
-        var atm = target.GetComponent<AttributesManager>();
+        var atm = target.GetComponent<EnemyAttributesManager>();
         if (atm != null) {
             atm.TakeDamage(attack);
         }

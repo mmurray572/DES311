@@ -7,9 +7,9 @@ public class DamageTester : MonoBehaviour
 {
 
     public AttributesManager playerAtm;
-    public EnemyAttributesManager regEnemyAtm;
-    public EnemyAttributesManager agileEnemyAtm;
-    public EnemyAttributesManager berserkerEnemyAtm;
+    public AttributesManager regEnemyAtm;
+    public AttributesManager agileEnemyAtm;
+    public AttributesManager berserkerEnemyAtm;
 
 
     private void Update()
